@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
+import re
 
 
 
@@ -50,7 +51,7 @@ def get_links_of_questions(exam_vendor="", exam_name=""):
                     num_pages = max(num_pages, int(option.get_text(strip=True)))
 
 
-        with open("output", "a") as file:
+        with open("questions", "a") as file:
             for i in range(1, num_pages + 1):
                 url = base_request_url + "/discussions/" + exam_vendor + "/{}/".format(i)
                 driver.get(url)
@@ -74,13 +75,21 @@ def get_links_of_questions(exam_vendor="", exam_name=""):
 
 def sort_questions(file_path):
     questions = {}
+    pattern = r"question-(\d+)-discussion"
     with open(file_path, "r") as file:
         lines = file.readlines()
-        for line in lines:
-            question = line.split("-")
-            
-            question_number = question.split("/")[-2]
-            questions[question_number] = question
+        for url in lines:
+            match = re.search(pattern, url)
+            if match:
+                question_number = int(match.group(1))
+                questions[question_number] = url
+    urls = []
+    for key in sorted(questions.keys()):
+        urls.append(questions[key])
+    
+    with open("ordered_questions", "w") as file:
+        for url in urls:
+            file.write(url)
         
         
     with open(file_path, "w") as file:
@@ -88,4 +97,5 @@ def sort_questions(file_path):
 
 # Example usage
 if __name__ == "__main__":
-    open_website_for_duration(exam_vendor="hashicorp" , exam_name="Exam Terraform Associate topic 1")
+    # open_website_for_duration(exam_vendor="hashicorp" , exam_name="Exam Terraform Associate topic 1")
+    sort_questions("./questions")
