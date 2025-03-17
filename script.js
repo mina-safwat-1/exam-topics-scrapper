@@ -254,6 +254,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     item.appendChild(badge);
                 }
             }
+    
+            // Check if the selected answer is wrong
+            if (item.classList.contains('selected') && !correctAnswers.includes(choiceLetter)) {
+                item.classList.add('incorrect'); // Add a class for incorrect answers
+            }
         });
     }
 
@@ -269,10 +274,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (hideBtn) hideBtn.style.display = 'none';
         if (revealBtn) revealBtn.style.display = 'inline-block';
     
-        // Remove highlight and most voted badge from choices
+        // Remove highlight, most voted badge, and incorrect styling from choices
         document.querySelectorAll('.choice-item').forEach(item => {
             item.classList.remove('correct');
             item.classList.remove('selected');
+            item.classList.remove('incorrect'); // Remove incorrect styling
     
             // Remove most voted badge
             const badge = item.querySelector('.most-voted-badge');

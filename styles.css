@@ -422,3 +422,9 @@ main {
     font-size: 12px;
     margin-left: 10px;
 }
+
+/* styles.css */
+.choice-item.incorrect {
+    background-color: #ffcccc; /* Light red background for incorrect answers */
+    border-color: #ff0000; /* Red border for incorrect answers */
+}
