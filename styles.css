@@ -340,3 +340,58 @@ main {
         padding: 8px 15px;
     }
 }
+
+/* Enhanced vote distribution styling */
+.vote-bar {
+    height: 25px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.vote-progress {
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 40px; /* Ensure small percentages are still visible */
+}
+
+/* Dynamic colors for vote options */
+.vote-option-a { background-color: #17a2b8; }
+.vote-option-b { background-color: #0069d9; }
+.vote-option-c { background-color: #fd7e14; }
+.vote-option-d { background-color: #6f42c1; }
+
+/* Dynamic colors for dots */
+.a-dot { background-color: #17a2b8; }
+.b-dot { background-color: #0069d9; }
+.c-dot { background-color: #fd7e14; }
+.d-dot { background-color: #6f42c1; }
+
+/* Improved spacing for vote details */
+.vote-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.footer p {
+    margin: 0;
+}

@@ -1,0 +1,36 @@
+[
+    {
+      "id": "817736",
+      "number": 20,
+      "topic": 1,
+      "text": "One remote backend configuration always maps to a single remote workspace.",
+      "choices": [
+        { "letter": "A", "text": "True", "votes": 9 },
+        { "letter": "B", "text": "False", "votes": 62, "correct": true, "mostVoted": true }
+      ]
+    },
+    {
+      "id": "817737",
+      "number": 21,
+      "topic": 2,
+      "text": "Which Terraform command is used to validate the syntax of your configuration files?",
+      "choices": [
+        { "letter": "A", "text": "terraform check", "votes": 5 },
+        { "letter": "B", "text": "terraform validate", "votes": 82, "correct": true, "mostVoted": true },
+        { "letter": "C", "text": "terraform verify", "votes": 10 },
+        { "letter": "D", "text": "terraform syntax", "votes": 3 }
+      ]
+    },
+    {
+      "id": "817738",
+      "number": 22,
+      "topic": 1,
+      "text": "Which command would you use to create an execution plan and then execute the planned changes?",
+      "choices": [
+        { "letter": "A", "text": "terraform plan --auto-approve", "votes": 8 },
+        { "letter": "B", "text": "terraform apply", "votes": 75, "correct": true, "mostVoted": true },
+        { "letter": "C", "text": "terraform execute", "votes": 2 },
+        { "letter": "D", "text": "terraform run", "votes": 5 }
+      ]
+    }
+  ]

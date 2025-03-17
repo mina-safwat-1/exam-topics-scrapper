@@ -1,97 +1,305 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Variables
-    const revealBtn = document.getElementById('revealBtn');
-    const hideBtn = document.getElementById('hideBtn');
-    const answerContainer = document.querySelector('.answer-container');
-    const choiceItems = document.querySelectorAll('.choice-item');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
+    // DOM elements
+    const container = document.querySelector('.container');
     const progressBar = document.getElementById('progressBar');
     const currentQuestionSpan = document.getElementById('currentQuestion');
     const totalQuestionsSpan = document.getElementById('totalQuestions');
     
-    // Question data - you'll expand this as you add more questions
-    const questions = [
-        {
-            id: "817736",
-            number: 20,
-            topic: 1,
-            text: "One remote backend configuration always maps to a single remote workspace.",
-            choices: [
-                { letter: "A", text: "True", votes: 9 },
-                { letter: "B", text: "False", votes: 62, correct: true, mostVoted: true }
-            ]
-        }
-        // Add more questions here as you build your collection
-    ];
-    
-    // Set initial question count
+    // Variables
+    let questions = [];
     let currentQuestionIndex = 0;
-    totalQuestionsSpan.textContent = questions.length;
-    updateProgressBar();
     
-    // Toggle answer visibility
-    revealBtn.addEventListener('click', function() {
+    // Fetch questions from JSON file
+    fetch('questions.json')
+        .then(response => response.json())
+        .then(data => {
+            questions = data;
+            totalQuestionsSpan.textContent = questions.length;
+            initializeQuestionCard();
+            loadQuestion(currentQuestionIndex);
+            updateProgressBar();
+        })
+        .catch(error => {
+            console.error('Error loading questions:', error);
+            // Display error message to user
+            container.innerHTML = `
+                <div class="error-message">
+                    <h2>Error Loading Questions</h2>
+                    <p>There was a problem loading the question data. Please try using a local web server.</p>
+                    <p>Error details: ${error.message}</p>
+                </div>
+            `;
+        });
+    
+    // Function to initialize the question card structure
+    function initializeQuestionCard() {
+        // Create main element if it doesn't exist
+        let main = document.querySelector('main');
+        if (!main) {
+            main = document.createElement('main');
+            container.appendChild(main);
+        } else {
+            main.innerHTML = ''; // Clear main if it exists
+        }
+        
+        // Create question card structure
+        const questionCard = document.createElement('div');
+        questionCard.className = 'question-card';
+        
+        questionCard.innerHTML = `
+            <div class="question-header">
+                <span class="question-number"></span>
+                <span class="topic-badge"></span>
+            </div>
+            <div class="question-body"></div>
+            <div class="choices-container"></div>
+            <div class="actions">
+                <button id="revealBtn" class="btn btn-primary">Show Answer</button>
+                <button id="hideBtn" class="btn btn-secondary" style="display: none;">Hide Answer</button>
+            </div>
+            <div class="answer-container" style="display: none;">
+                <div class="answer-header">
+                    <strong>Suggested Answer:</strong> <span class="correct-answer"></span>
+                    <button class="vote-btn" title="Vote for this answer">🗳️</button>
+                </div>
+                <div class="vote-distribution">
+                    <h4>Community Vote Distribution</h4>
+                    <div class="vote-chart">
+                        <div class="vote-bar"></div>
+                    </div>
+                    <div class="vote-details"></div>
+                </div>
+            </div>
+        `;
+        
+        main.appendChild(questionCard);
+        
+        // Create navigation if it doesn't exist
+        if (!document.querySelector('.navigation')) {
+            const navigation = document.createElement('div');
+            navigation.className = 'navigation';
+            navigation.innerHTML = `
+                <button id="prevBtn" class="nav-btn">Previous</button>
+                <button id="nextBtn" class="nav-btn">Next</button>
+            `;
+            container.appendChild(navigation);
+        }
+        
+        // Reinitialize button references
+        initializeEventListeners();
+    }
+    
+    // Function to initialize event listeners
+    function initializeEventListeners() {
+        const revealBtn = document.getElementById('revealBtn');
+        const hideBtn = document.getElementById('hideBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
+        if (revealBtn) {
+            revealBtn.addEventListener('click', revealAnswer);
+        }
+        
+        if (hideBtn) {
+            hideBtn.addEventListener('click', hideAnswer);
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function() {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    loadQuestion(currentQuestionIndex);
+                    updateProgressBar();
+                }
+            });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    loadQuestion(currentQuestionIndex);
+                    updateProgressBar();
+                }
+            });
+        }
+    }
+    
+    // Function to load a question
+    function loadQuestion(index) {
+        const question = questions[index];
+        const questionCard = document.querySelector('.question-card');
+        
+        if (!question || !questionCard) return;
+        
+        // Reset the UI state
+        hideAnswer();
+        
+        // Update question card
+        questionCard.setAttribute('data-id', question.id);
+        
+        // Update question header
+        document.querySelector('.question-number').textContent = `Question ${question.number}`;
+        document.querySelector('.topic-badge').textContent = `Topic ${question.topic}`;
+        
+        // Update question body
+        document.querySelector('.question-body').innerHTML = `<p>${question.text}</p>`;
+        
+        // Generate choices
+        const choicesContainer = document.querySelector('.choices-container');
+        choicesContainer.innerHTML = '';
+        
+        question.choices.forEach(choice => {
+            const choiceItem = document.createElement('div');
+            choiceItem.className = 'choice-item';
+            choiceItem.setAttribute('data-choice', choice.letter);
+            
+            choiceItem.innerHTML = `
+                <div class="choice-letter">${choice.letter}</div>
+                <div class="choice-text">${choice.text}</div>
+            `;
+            
+            choiceItem.addEventListener('click', function() {
+                // Remove selected from all choices
+                document.querySelectorAll('.choice-item').forEach(item => {
+                    item.classList.remove('selected');
+                });
+                
+                // Add selected class
+                this.classList.add('selected');
+                
+                // Automatically show the answer after selection
+                if (document.querySelector('.answer-container').style.display === 'none' || 
+                    !document.querySelector('.answer-container').style.display) {
+                    revealAnswer();
+                }
+            });
+            
+            choicesContainer.appendChild(choiceItem);
+        });
+        
+        // Update answer container
+        const correctChoice = question.choices.find(choice => choice.correct);
+        document.querySelector('.correct-answer').textContent = correctChoice.letter;
+        
+        // Update vote distribution
+        updateVoteDistribution(question.choices);
+        
+        // Update navigation buttons
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
+        if (prevBtn) prevBtn.disabled = index === 0;
+        if (nextBtn) nextBtn.disabled = index === questions.length - 1;
+    }
+    
+    // Function to reveal the answer
+    function revealAnswer() {
+        const answerContainer = document.querySelector('.answer-container');
+        const revealBtn = document.getElementById('revealBtn');
+        const hideBtn = document.getElementById('hideBtn');
+        
+        if (!answerContainer || !revealBtn || !hideBtn) return;
+        
+        const question = questions[currentQuestionIndex];
+        const correctLetter = question.choices.find(choice => choice.correct).letter;
+        const mostVotedChoice = question.choices.find(choice => choice.mostVoted);
+        
         answerContainer.style.display = 'block';
         revealBtn.style.display = 'none';
         hideBtn.style.display = 'inline-block';
         
-        // Highlight the correct answer
-        choiceItems.forEach(item => {
+        // Highlight the correct answer and add most voted badge
+        document.querySelectorAll('.choice-item').forEach(item => {
             const choiceLetter = item.getAttribute('data-choice');
-            if (choiceLetter === 'B') { // Hardcoded for first question, will be dynamic later
+            
+            // Add correct class to correct answer
+            if (choiceLetter === correctLetter) {
                 item.classList.add('correct');
             }
-        });
-    });
-    
-    hideBtn.addEventListener('click', function() {
-        answerContainer.style.display = 'none';
-        hideBtn.style.display = 'none';
-        revealBtn.style.display = 'inline-block';
-        
-        // Remove highlight from the correct answer
-        choiceItems.forEach(item => {
-            item.classList.remove('correct');
-        });
-    });
-    
-    // Choice selection
-    choiceItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // First remove selected from all
-            choiceItems.forEach(choice => choice.classList.remove('selected'));
             
-            // Add selected class
-            this.classList.add('selected');
-            
-            // Automatically show the answer after selection
-            if (answerContainer.style.display === 'none' || !answerContainer.style.display) {
-                revealBtn.click();
+            // Add most voted badge
+            if (mostVotedChoice && choiceLetter === mostVotedChoice.letter) {
+                if (!item.querySelector('.most-voted-badge')) {
+                    const badge = document.createElement('div');
+                    badge.className = 'most-voted-badge';
+                    badge.textContent = 'Most Voted';
+                    item.appendChild(badge);
+                }
             }
         });
-    });
+    }
     
-    // Navigation between questions
-    prevBtn.addEventListener('click', function() {
-        if (currentQuestionIndex > 0) {
-            currentQuestionIndex--;
-            loadQuestion(currentQuestionIndex);
-        }
-    });
+    // Function to hide the answer
+    function hideAnswer() {
+        const answerContainer = document.querySelector('.answer-container');
+        const revealBtn = document.getElementById('revealBtn');
+        const hideBtn = document.getElementById('hideBtn');
+        
+        if (!answerContainer) return;
+        
+        answerContainer.style.display = 'none';
+        
+        if (hideBtn) hideBtn.style.display = 'none';
+        if (revealBtn) revealBtn.style.display = 'inline-block';
+        
+        // Remove highlight and most voted badge from choices
+        document.querySelectorAll('.choice-item').forEach(item => {
+            item.classList.remove('correct');
+            item.classList.remove('selected');
+            
+            // Remove most voted badge
+            const badge = item.querySelector('.most-voted-badge');
+            if (badge) badge.remove();
+        });
+    }
     
-    nextBtn.addEventListener('click', function() {
-        if (currentQuestionIndex < questions.length - 1) {
-            currentQuestionIndex++;
-            loadQuestion(currentQuestionIndex);
-        }
-    });
+    // Function to update the vote distribution
+    function updateVoteDistribution(choices) {
+        const voteChart = document.querySelector('.vote-chart');
+        const voteDetails = document.querySelector('.vote-details');
+        
+        if (!voteChart || !voteDetails) return;
+        
+        const totalVotes = choices.reduce((sum, choice) => sum + choice.votes, 0);
+        
+        // Clear existing content
+        voteChart.innerHTML = '<div class="vote-bar"></div>';
+        voteDetails.innerHTML = '';
+        
+        const voteBar = voteChart.querySelector('.vote-bar');
+        
+        // Sort choices by votes (descending)
+        const sortedChoices = [...choices].sort((a, b) => b.votes - a.votes);
+        
+        // Add vote progress elements
+        sortedChoices.forEach(choice => {
+            const percentage = totalVotes > 0 ? Math.round((choice.votes / totalVotes) * 100) : 0;
+            
+            // Create progress element
+            const progressElement = document.createElement('div');
+            progressElement.className = `vote-progress vote-option-${choice.letter.toLowerCase()}`;
+            progressElement.style.width = `${percentage}%`;
+            progressElement.textContent = `${choice.letter} (${percentage}%)`;
+            voteBar.appendChild(progressElement);
+            
+            // Add vote detail
+            const detailElement = document.createElement('div');
+            detailElement.className = 'vote-detail';
+            detailElement.innerHTML = `
+                <span class="dot ${choice.letter.toLowerCase()}-dot"></span>
+                ${choice.letter}: ${choice.votes} votes
+            `;
+            voteDetails.appendChild(detailElement);
+        });
+    }
     
     // Update progress bar
     function updateProgressBar() {
+        if (!progressBar || !currentQuestionSpan) return;
+        
         const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
         progressBar.style.width = `${progress}%`;
         currentQuestionSpan.textContent = currentQuestionIndex + 1;
-        
-        // Disable/enable navigation buttons
-        prevBtn.disabled = currentQuestionIndex === 0;
+    }
+});
