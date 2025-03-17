@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentQuestionIndex = 0;
     
     // Fetch questions from JSON file
-    fetch('questions.json')
+    fetch('questions_improved.json')
         .then(response => response.json())
         .then(data => {
             questions = data;
@@ -124,100 +124,124 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-    
-    // Function to load a question
     function loadQuestion(index) {
         const question = questions[index];
         const questionCard = document.querySelector('.question-card');
-        
+    
         if (!question || !questionCard) return;
-        
+    
         // Reset the UI state
         hideAnswer();
-        
+    
         // Update question card
         questionCard.setAttribute('data-id', question.id);
-        
+    
         // Update question header
         document.querySelector('.question-number').textContent = `Question ${question.number}`;
         document.querySelector('.topic-badge').textContent = `Topic ${question.topic}`;
-        
+    
         // Update question body
-        document.querySelector('.question-body').innerHTML = `<p>${question.text}</p>`;
-        
+        const questionBody = document.querySelector('.question-body');
+        questionBody.innerHTML = `<p>${question.text}</p>`;
+    
+        // Handle images (if present)
+        if (question.images && question.images.length > 0) {
+            question.images.forEach(image => {
+                const imgElement = document.createElement('img');
+                imgElement.src = image;
+                imgElement.alt = 'Question Image';
+                imgElement.className = 'question-image';
+                questionBody.appendChild(imgElement);
+            });
+        }
+    
         // Generate choices
         const choicesContainer = document.querySelector('.choices-container');
         choicesContainer.innerHTML = '';
-        
+    
         question.choices.forEach(choice => {
             const choiceItem = document.createElement('div');
             choiceItem.className = 'choice-item';
             choiceItem.setAttribute('data-choice', choice.letter);
-            
+    
             choiceItem.innerHTML = `
                 <div class="choice-letter">${choice.letter}</div>
                 <div class="choice-text">${choice.text}</div>
             `;
-            
-            choiceItem.addEventListener('click', function() {
-                // Remove selected from all choices
-                document.querySelectorAll('.choice-item').forEach(item => {
-                    item.classList.remove('selected');
+    
+            // Handle multi-answer questions
+            if (question.isMultiAnswer) {
+                choiceItem.addEventListener('click', function() {
+                    // Toggle the selected class
+                    this.classList.toggle('selected');
+    
+                    // Automatically show the answer after selection
+                    if (document.querySelector('.answer-container').style.display === 'none' || 
+                        !document.querySelector('.answer-container').style.display) {
+                        revealAnswer();
+                    }
                 });
-                
-                // Add selected class
-                this.classList.add('selected');
-                
-                // Automatically show the answer after selection
-                if (document.querySelector('.answer-container').style.display === 'none' || 
-                    !document.querySelector('.answer-container').style.display) {
-                    revealAnswer();
-                }
-            });
-            
+            } else {
+                // Single-answer questions
+                choiceItem.addEventListener('click', function() {
+                    // Remove selected from all choices
+                    document.querySelectorAll('.choice-item').forEach(item => {
+                        item.classList.remove('selected');
+                    });
+    
+                    // Add selected class
+                    this.classList.add('selected');
+    
+                    // Automatically show the answer after selection
+                    if (document.querySelector('.answer-container').style.display === 'none' || 
+                        !document.querySelector('.answer-container').style.display) {
+                        revealAnswer();
+                    }
+                });
+            }
+    
             choicesContainer.appendChild(choiceItem);
         });
-        
+    
         // Update answer container
-        const correctChoice = question.choices.find(choice => choice.correct);
-        document.querySelector('.correct-answer').textContent = correctChoice.letter;
-        
+        const correctAnswers = question.correctAnswers || [];
+        const correctChoices = question.choices.filter(choice => correctAnswers.includes(choice.letter));
+        document.querySelector('.correct-answer').textContent = correctChoices.map(choice => choice.letter).join(', ');
+    
         // Update vote distribution
         updateVoteDistribution(question.choices);
-        
+    
         // Update navigation buttons
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
-        
+    
         if (prevBtn) prevBtn.disabled = index === 0;
         if (nextBtn) nextBtn.disabled = index === questions.length - 1;
     }
-    
-    // Function to reveal the answer
     function revealAnswer() {
         const answerContainer = document.querySelector('.answer-container');
         const revealBtn = document.getElementById('revealBtn');
         const hideBtn = document.getElementById('hideBtn');
-        
+    
         if (!answerContainer || !revealBtn || !hideBtn) return;
-        
+    
         const question = questions[currentQuestionIndex];
-        const correctLetter = question.choices.find(choice => choice.correct).letter;
+        const correctAnswers = question.correctAnswers || [];
         const mostVotedChoice = question.choices.find(choice => choice.mostVoted);
-        
+    
         answerContainer.style.display = 'block';
         revealBtn.style.display = 'none';
         hideBtn.style.display = 'inline-block';
-        
-        // Highlight the correct answer and add most voted badge
+    
+        // Highlight the correct answers and add most voted badge
         document.querySelectorAll('.choice-item').forEach(item => {
             const choiceLetter = item.getAttribute('data-choice');
-            
-            // Add correct class to correct answer
-            if (choiceLetter === correctLetter) {
+    
+            // Add correct class to correct answers
+            if (correctAnswers.includes(choiceLetter)) {
                 item.classList.add('correct');
             }
-            
+    
             // Add most voted badge
             if (mostVotedChoice && choiceLetter === mostVotedChoice.letter) {
                 if (!item.querySelector('.most-voted-badge')) {

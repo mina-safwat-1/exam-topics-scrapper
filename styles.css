@@ -395,3 +395,30 @@ main {
 .footer p {
     margin: 0;
 }
+
+
+/* styles.css */
+.question-image {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.choice-item.selected {
+    background-color: #e0f7fa;
+    border-color: #00bcd4;
+}
+
+.choice-item.correct {
+    background-color: #c8e6c9;
+    border-color: #4caf50;
+}
+
+.most-voted-badge {
+    background-color: #ffeb3b;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 10px;
+}
