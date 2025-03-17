@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-
+import json
 
 from bs4 import BeautifulSoup
 
@@ -100,26 +100,109 @@ def sort_questions(file_path):
         file.writelines(lines)
 
 
-def get_question(url):
-    driver.get(url)
-    wait = WebDriverWait(driver, 10)
-    reveal_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a.btn.btn-primary.reveal-solution")))
-    # Click the button
-    reveal_button.click()
-    html_content = driver.page_source
-    soup = BeautifulSoup(html_content, "html.parser")
+def get_question(path):
     
-    question = soup.find(attrs={"class": "question-body mt-3 pt-3 border-top"})
+    questions = []
     
-    print(question)
-    
-    
-    time.sleep(5)
-    
-    
+    with open(path, "r") as file:
+        urls = file.readlines()
+        for url in urls:
+            driver.get(url)
+            wait = WebDriverWait(driver, 10)
+            reveal_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a.btn.btn-primary.reveal-solution")))
+            # Click the button
+            reveal_button.click()
+            html_content = driver.page_source
+                                        
+            # In this case, we'll use the provided HTML content
+            question_data = extract_question_data(html_content)
+            
+            questions.append(question_data)
 
+            # Convert to JSON and print
+            
+        json_output = json.dumps(questions, indent=2)
+        # Save to a file
+        with open('questions.json', 'w') as f:
+            f.write(json_output)
     
+    driver.quit()
+
+            
+
+def extract_question_data(html_content):
+    soup = BeautifulSoup(html_content, 'html.parser')
     
+    # Extract question number and topic
+    question_div = soup.find('div', class_='question-discussion-header')
+    question_info = question_div.find('div').text.strip().split('\n')
+    question_number = int(re.search(r'Question #: (\d+)', question_info[0]).group(1))
+    topic_number = int(re.search(r'Topic #: (\d+)', question_info[1]).group(1))
+    
+    # Extract question text
+    question_text = soup.find('div', class_='question-body').find('p', class_='card-text').text.strip()
+    
+    # Extract choices
+    choices = []
+    choice_items = soup.find_all('li', class_='multi-choice-item')
+    
+    # Extract vote data
+    vote_script = soup.find('script', id=re.compile(r'\d+'))
+    vote_data = {}
+    if vote_script:
+        vote_json = json.loads(vote_script.string)
+        for item in vote_json:
+            vote_data[item['voted_answers']] = {
+                'votes': item['vote_count'],
+                'is_most_voted': item['is_most_voted']
+            }
+    
+    for choice in choice_items:
+        letter_span = choice.find('span', class_='multi-choice-letter')
+        letter = letter_span.get('data-choice-letter')
+        
+        # Create a copy of the element to work with
+        choice_copy = BeautifulSoup(str(choice), 'html.parser')
+        
+        # Remove the letter span
+        choice_copy.find('span', class_='multi-choice-letter').extract()
+        
+        # Remove the "Most Voted" badge if it exists
+        most_voted_badge = choice_copy.find('span', class_='most-voted-answer-badge')
+        if most_voted_badge:
+            most_voted_badge.extract()
+        
+        # Get the cleaned text
+        text = choice_copy.get_text().strip()
+        
+        choice_data = {
+            "letter": letter,
+            "text": text,
+            "votes": vote_data.get(letter, {}).get('votes', 0)
+        }
+        
+        # Check if this is the correct answer
+        if 'correct-choice' in choice.get('class', []):
+            choice_data["correct"] = True
+        
+        # Check if most voted
+        if vote_data.get(letter, {}).get('is_most_voted', False):
+            choice_data["mostVoted"] = True
+        
+        choices.append(choice_data)
+    
+    # Create the final JSON structure
+    question_data = {
+        "number": question_number,
+        "topic": topic_number,
+        "text": question_text,
+        "choices": choices
+    }
+    
+    return question_data
+
+
+
     
 
 
@@ -127,4 +210,4 @@ def get_question(url):
 if __name__ == "__main__":
     # open_website_for_duration(exam_vendor="hashicorp" , exam_name="Exam Terraform Associate topic 1")
     # sort_questions("./questions")
-    get_question("https://www.examtopics.com/discussions/hashicorp/view/75671-exam-terraform-associate-topic-1-question-2-discussion/")
+    get_question("ordered_questions")
