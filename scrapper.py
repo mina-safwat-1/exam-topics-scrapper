@@ -3,11 +3,17 @@ from selenium.webdriver.chrome.options import Options
 import time
 import re
 
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+
 
 
 from bs4 import BeautifulSoup
 
 base_request_url = "https://www.examtopics.com"
+chrome_options = Options()
+driver = webdriver.Chrome(options=chrome_options)
 
 def get_links_of_questions(exam_vendor="", exam_name=""):
     """
@@ -18,11 +24,9 @@ def get_links_of_questions(exam_vendor="", exam_name=""):
         duration_seconds (int): How long to keep the browser open in seconds
     """
     # Set up Chrome options (uncomment headless mode if you don't want to see the browser)
-    chrome_options = Options()
     # chrome_options.add_argument("--headless")  # Comment this out to see the browser
     
     # Initialize the Chrome driver
-    driver = webdriver.Chrome(options=chrome_options)
     
     try:
         # Navigate to the URL        
@@ -95,7 +99,32 @@ def sort_questions(file_path):
     with open(file_path, "w") as file:
         file.writelines(lines)
 
+
+def get_question(url):
+    driver.get(url)
+    wait = WebDriverWait(driver, 10)
+    reveal_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a.btn.btn-primary.reveal-solution")))
+    # Click the button
+    reveal_button.click()
+    html_content = driver.page_source
+    soup = BeautifulSoup(html_content, "html.parser")
+    
+    question = soup.find(attrs={"class": "question-body mt-3 pt-3 border-top"})
+    
+    print(question)
+    
+    
+    time.sleep(5)
+    
+    
+
+    
+    
+    
+
+
 # Example usage
 if __name__ == "__main__":
     # open_website_for_duration(exam_vendor="hashicorp" , exam_name="Exam Terraform Associate topic 1")
-    sort_questions("./questions")
+    # sort_questions("./questions")
+    get_question("https://www.examtopics.com/discussions/hashicorp/view/75671-exam-terraform-associate-topic-1-question-2-discussion/")
