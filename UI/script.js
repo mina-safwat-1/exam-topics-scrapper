@@ -11,6 +11,19 @@ document.addEventListener('DOMContentLoaded', function () {
     let questions = [];
     let currentQuestionIndex = 0;
 
+
+    // Retrieve the last accessed question index from localStorage
+    const storedIndex = localStorage.getItem('currentQuestionIndex');
+
+
+    if (storedIndex !== null) {
+        currentQuestionIndex = parseInt(storedIndex, 10);
+    }
+
+    function saveCurrentQuestionIndex() {
+        localStorage.setItem('currentQuestionIndex', currentQuestionIndex);
+    }
+
     // Fetch questions from JSON file
     fetch(questions_json_path)
         .then(response => response.json())
@@ -142,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     updateProgressBar();
                 }
                 document.getElementById('questionSelect').value = currentQuestionIndex;
+                saveCurrentQuestionIndex();
 
             });
         }
@@ -154,6 +168,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     updateProgressBar();
                 }
                 document.getElementById('questionSelect').value = currentQuestionIndex;
+                saveCurrentQuestionIndex();
+
 
 
             });
@@ -378,6 +394,7 @@ function populateQuestionDropdown() {
     // Set the current question as selected
     questionSelect.value = currentQuestionIndex;
 
+
     // Add event listener to handle navigation
     questionSelect.addEventListener('change', function () {
         const selectedIndex = parseInt(this.value, 10);
@@ -385,6 +402,8 @@ function populateQuestionDropdown() {
             currentQuestionIndex = selectedIndex;
             loadQuestion(currentQuestionIndex);
             updateProgressBar();
+            saveCurrentQuestionIndex();
+
         }
     });
 }
