@@ -416,7 +416,7 @@ main {
 }
 
 .most-voted-badge {
-    background-color: #ffeb3b;
+    background-color: #05810b;
     padding: 2px 6px;
     border-radius: 4px;
     font-size: 12px;
@@ -427,4 +427,49 @@ main {
 .choice-item.incorrect {
     background-color: #ffcccc; /* Light red background for incorrect answers */
     border-color: #ff0000; /* Red border for incorrect answers */
+}
+
+/* styles.css */
+.question-navigation {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.question-navigation label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.question-navigation select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.question-navigation select:hover {
+    border-color: #888; /* Darker border on hover */
+}
+
+.question-navigation select:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow */
+}
+
+@media (max-width: 600px) {
+    .question-navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .question-navigation label {
+        margin-bottom: 5px; /* Add space between label and dropdown on small screens */
+    }
+
+    .question-navigation select {
+        width: 100%; /* Full width on small screens */
+    }
 }

@@ -5,12 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentQuestionSpan = document.getElementById('currentQuestion');
     const totalQuestionsSpan = document.getElementById('totalQuestions');
 
+    const questions_json_path = 'questions_improved.json';
+
     // Variables
     let questions = [];
     let currentQuestionIndex = 0;
 
     // Fetch questions from JSON file
-    fetch('questions_improved.json')
+    fetch(questions_json_path)
         .then(response => response.json())
         .then(data => {
             questions = data;
@@ -89,12 +91,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
 
-        const footer = document.createElement('footer');
-        footer.className = 'footer';
-        footer.innerHTML = `
-        <p>Created by Mina Safwat</p>
-        `;
-        container.appendChild(footer);
+        // Add a dropdown for question navigation
+
+        if (!document.querySelector('.question-navigation')) {
+            const dropdown = document.createElement('div');
+            dropdown.className = 'question-navigation';
+            dropdown.innerHTML = `
+                <label for="questionSelect">Go to Question:</label>
+                <select id="questionSelect"></select>
+
+            `;
+            container.appendChild(dropdown);
+        }
+
+        if (!document.querySelector('.footer')) {
+            const footer = document.createElement('footer');
+            footer.className = 'footer';
+            footer.innerHTML = `
+            <p>Created by Mina Safwat</p>
+            `;
+            container.appendChild(footer);
+        }
 
 
 
@@ -334,4 +351,57 @@ document.addEventListener('DOMContentLoaded', function () {
         progressBar.style.width = `${progress}%`;
         currentQuestionSpan.textContent = currentQuestionIndex + 1;
     }
+
+    // Function to populate the question navigation dropdown
+function populateQuestionDropdown() {
+    const questionSelect = document.getElementById('questionSelect');
+    if (!questionSelect) return;
+
+    // Clear existing options
+    questionSelect.innerHTML = '';
+
+    // Add an option for each question
+    questions.forEach((question, index) => {
+        const option = document.createElement('option');
+        option.value = index; // Use the question index as the value
+        option.textContent = `Question ${question.number}`; // Display the question number
+        questionSelect.appendChild(option);
+    });
+
+    // Set the current question as selected
+    questionSelect.value = currentQuestionIndex;
+
+    // Add event listener to handle navigation
+    questionSelect.addEventListener('change', function () {
+        const selectedIndex = parseInt(this.value, 10);
+        if (!isNaN(selectedIndex) && selectedIndex >= 0 && selectedIndex < questions.length) {
+            currentQuestionIndex = selectedIndex;
+            loadQuestion(currentQuestionIndex);
+            updateProgressBar();
+        }
+    });
+}
+
+// Call this function after fetching questions
+fetch(questions_json_path)
+    .then(response => response.json())
+    .then(data => {
+        questions = data;
+        totalQuestionsSpan.textContent = questions.length;
+        initializeQuestionCard();
+        loadQuestion(currentQuestionIndex);
+        updateProgressBar();
+        populateQuestionDropdown(); // Populate the dropdown after loading questions
+    })
+    .catch(error => {
+        console.error('Error loading questions:', error);
+        container.innerHTML = `
+            <div class="error-message">
+                <h2>Error Loading Questions</h2>
+                <p>There was a problem loading the question data. Please try using a local web server.</p>
+                <p>Error details: ${error.message}</p>
+            </div>
+        `;
+    });
 });
+
