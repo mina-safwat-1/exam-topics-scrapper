@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentQuestionSpan = document.getElementById('currentQuestion');
     const totalQuestionsSpan = document.getElementById('totalQuestions');
 
-    const questions_json_path = 'questions_improved.json';
+    const questions_json_path = 'questions.json';
 
     // Variables
     let questions = [];
@@ -141,6 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     loadQuestion(currentQuestionIndex);
                     updateProgressBar();
                 }
+                document.getElementById('questionSelect').value = currentQuestionIndex;
+
             });
         }
 
@@ -151,8 +153,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     loadQuestion(currentQuestionIndex);
                     updateProgressBar();
                 }
+                document.getElementById('questionSelect').value = currentQuestionIndex;
+
+
             });
         }
+
+        
     }
 
     function loadQuestion(index) {
@@ -388,7 +395,6 @@ fetch(questions_json_path)
     .then(data => {
         questions = data;
         totalQuestionsSpan.textContent = questions.length;
-        initializeQuestionCard();
         loadQuestion(currentQuestionIndex);
         updateProgressBar();
         populateQuestionDropdown(); // Populate the dropdown after loading questions

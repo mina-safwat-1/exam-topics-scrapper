@@ -123,7 +123,7 @@ def get_question(path):
             
         json_output = json.dumps(questions, indent=2)
         # Save to a file
-        with open('questions_improved.json', 'w') as f:
+        with open('questions.json', 'w') as f:
             f.write(json_output)
     
     driver.quit()

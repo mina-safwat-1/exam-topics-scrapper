@@ -16,6 +16,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -35,6 +39,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -64,6 +72,10 @@
         "text": "All of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -93,6 +105,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -112,6 +128,13 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0000400001.png"
     ]
   },
   {
@@ -141,6 +164,10 @@
         "text": "terraform plan -target=null_resource.run_script",
         "votes": 5
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -170,6 +197,10 @@
         "text": "file",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -204,6 +235,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "E"
     ]
   },
   {
@@ -233,6 +268,10 @@
         "text": "terraform workspace",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -262,6 +301,10 @@
         "text": "Run terraform destroy then terraform apply and look for the IP address in stdout",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -291,6 +334,10 @@
         "text": "Self-describing infrastructure",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -310,6 +357,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -339,6 +390,13 @@
         "text": "test",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0000800001.png"
     ]
   },
   {
@@ -368,6 +426,10 @@
         "text": "Run terraform import",
         "votes": 1
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -397,6 +459,10 @@
         "text": "Cloud provider",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -431,6 +497,10 @@
         "text": "None of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -450,6 +520,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -469,6 +543,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -498,6 +576,10 @@
         "text": "chomp",
         "votes": 8
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -527,6 +609,11 @@
         "text": "Run the terraform import-gcp command",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "B",
+      "C"
     ]
   },
   {
@@ -556,6 +643,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -575,6 +666,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -609,6 +704,11 @@
         "text": "Validate",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "B",
+      "D"
     ]
   },
   {
@@ -638,6 +738,10 @@
         "text": "When you want Terraform to destroy all the infrastructure in your workspace",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -657,6 +761,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -686,6 +794,10 @@
         "text": "You apply failed due to a state lock",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -715,6 +827,10 @@
         "text": "Terraform Module Registry",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -744,6 +860,10 @@
         "text": "Using the workspace as a data source",
         "votes": 3
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -763,6 +883,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -792,6 +916,11 @@
         "votes": 0,
         "correct": true
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "D"
     ]
   },
   {
@@ -821,6 +950,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -840,6 +973,10 @@
         "text": "False",
         "votes": 19
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -859,6 +996,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -888,6 +1029,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -917,6 +1062,10 @@
         "text": "Write a shell script to transform Terraform files using tools such as AWK, Python, and sed",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -946,6 +1095,10 @@
         "text": "The ability to share modules publicly with any user of Terraform",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -975,6 +1128,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -1004,6 +1161,11 @@
         "votes": 0,
         "correct": true
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "B",
+      "D"
     ]
   },
   {
@@ -1038,6 +1200,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "E"
     ]
   },
   {
@@ -1067,6 +1233,13 @@
         "text": "Nothing \u05d2\u20ac\" modules stored on the public Terraform Module Registry always default to version 1.0.0",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0002300001.png"
     ]
   },
   {
@@ -1096,6 +1269,11 @@
         "votes": 0,
         "correct": true
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "C",
+      "D"
     ]
   },
   {
@@ -1125,6 +1303,10 @@
         "text": "In the user's terraform.state file",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -1154,6 +1336,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -1183,6 +1369,10 @@
         "text": "Terraform will run more slowly",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -1202,6 +1392,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -1231,13 +1425,33 @@
         "text": "aws_ami.ubuntu.id",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0002600001.png"
     ]
   },
   {
     "number": 47,
     "topic": 1,
     "text": "FILL BLANK -You need to specify a dependency manually.What resource meta-parameter can you use to make sure Terraform respects the dependency?Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
-    "choices": []
+    "choices": [],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "d",
+      "e",
+      "p",
+      "e",
+      "n",
+      "d",
+      "s",
+      "_",
+      "o",
+      "n"
+    ]
   },
   {
     "number": 48,
@@ -1266,6 +1480,10 @@
         "text": "Delete the VM using the cloud provider console and terraform apply to apply the changes to the Terraform state file.",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -1295,6 +1513,13 @@
         "text": "test",
         "votes": 2
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0002800001.png"
     ]
   },
   {
@@ -1314,6 +1539,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -1343,6 +1572,10 @@
         "text": "The datasource block",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -1362,6 +1595,10 @@
         "text": "False",
         "votes": 2
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -1391,6 +1628,10 @@
         "text": "terraform show workspace",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -1410,6 +1651,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -1439,6 +1684,10 @@
         "text": "Signed Terraform providers",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -1473,6 +1722,10 @@
         "text": "None of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -1507,6 +1760,13 @@
         "text": "aws_instance.web.*.name",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0003200001.png"
     ]
   },
   {
@@ -1536,6 +1796,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -1555,6 +1819,10 @@
         "text": "False",
         "votes": 8
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -1584,19 +1852,59 @@
         "text": "Corrupt state files",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
     "number": 61,
     "topic": 1,
     "text": "FILL BLANK -Which flag would you add to terraform plan to save the execution plan to a file?Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
-    "choices": []
+    "choices": [],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "-",
+      "o",
+      "u",
+      "t",
+      "=",
+      "F",
+      "I",
+      "L",
+      "E",
+      "N",
+      "A",
+      "M",
+      "E"
+    ]
   },
   {
     "number": 62,
     "topic": 1,
     "text": "FILL BLANK -What is the name of the default file where Terraform stores the state?Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
-    "choices": []
+    "choices": [],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "T",
+      "e",
+      "r",
+      "r",
+      "a",
+      "f",
+      "o",
+      "r",
+      "m",
+      ".",
+      "t",
+      "f",
+      "s",
+      "t",
+      "a",
+      "t",
+      "e"
+    ]
   },
   {
     "number": 63,
@@ -1615,6 +1923,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -1644,6 +1956,10 @@
         "text": "set",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -1663,6 +1979,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -1682,6 +2002,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -1711,6 +2035,10 @@
         "text": "Reconciles Terraform's state against deployed resources and permanently modifies state using the current status of deployed resources",
         "votes": 3
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -1740,6 +2068,10 @@
         "text": "terraform init",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -1769,6 +2101,13 @@
         "text": "teat",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0004000001.png"
     ]
   },
   {
@@ -1798,6 +2137,10 @@
         "text": "Store the sensitive variables as plain text in a source code repository",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -1827,6 +2170,10 @@
         "text": "Always store your secrets in a secrets.tfvars file.",
         "votes": 3
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -1846,6 +2193,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -1875,6 +2226,10 @@
         "text": "Set the environment variable TF_LOG_PATH",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -1909,6 +2264,10 @@
         "text": "All of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -1938,6 +2297,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -1967,6 +2330,10 @@
         "text": "None of above",
         "votes": 2
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -1996,6 +2363,10 @@
         "text": "Terraform Cloud",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -2025,6 +2396,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -2054,6 +2429,10 @@
         "text": "They are not cached",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -2083,6 +2462,10 @@
         "text": "Terraform requires you to manually run terraform plan first",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2112,6 +2495,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -2141,6 +2528,10 @@
         "text": "terraform delete aws_instance.ubuntu[1]",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2160,6 +2551,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2189,6 +2584,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -2218,6 +2617,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -2247,6 +2650,10 @@
         "text": "Inspect all Terraform outputs to make sure they are correct",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -2276,6 +2683,10 @@
         "text": "ssh",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -2305,6 +2716,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -2334,6 +2749,10 @@
         "text": "version",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2363,6 +2782,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -2382,6 +2805,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2411,6 +2838,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -2440,6 +2871,10 @@
         "text": "Load required provider plugins",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -2459,6 +2894,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2488,6 +2927,10 @@
         "text": "Only Terraform Cloud organization owners can approve plans in VCS connected workspaces",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2507,6 +2950,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2536,6 +2983,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -2565,6 +3016,10 @@
         "text": "When a change is made to the resources via the Azure Cloud Console, the changes are recorded in the current state file",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -2594,6 +3049,13 @@
         "text": "alias = aws.west",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0005900001.png"
     ]
   },
   {
@@ -2623,6 +3085,10 @@
         "text": "Nothing, child modules inherit variables of parent module",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -2642,6 +3108,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2671,6 +3141,10 @@
         "text": "A -var flag",
         "votes": 7
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2700,6 +3174,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -2729,6 +3207,10 @@
         "text": "Auditing cloud storage buckets with a vulnerability scanning tool",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -2758,6 +3240,10 @@
         "text": "None of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -2777,6 +3263,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2806,13 +3296,41 @@
         "text": "Import an existing state file to a new Terraform workspace",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
     "number": 108,
     "topic": 1,
     "text": "FILL BLANK -In the below configuration, how would you reference the module output vpc_id?Type your answer in the field provided. The text field is not case sensitive and all variations of the correct answer are accepted.",
-    "choices": []
+    "choices": [],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "o",
+      "u",
+      "t",
+      "p",
+      "u",
+      "t",
+      " ",
+      "\"",
+      "o",
+      "u",
+      "t",
+      "v",
+      "p",
+      "c",
+      "_",
+      "i",
+      "d",
+      "\""
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0006300001.png"
+    ]
   },
   {
     "number": 109,
@@ -2841,6 +3359,13 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0006400001.png"
     ]
   },
   {
@@ -2870,6 +3395,10 @@
         "text": "Prevents accidental deletion of the state file",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -2899,6 +3428,10 @@
         "text": "Upgrade your version of Terraform",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2918,6 +3451,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -2947,6 +3484,10 @@
         "text": "Keep the Terraform configuration files in a secret store",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -2976,6 +3517,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -3005,6 +3550,10 @@
         "text": "Stop and generate an error message about the missing instances",
         "votes": 1
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -3039,6 +3588,10 @@
         "text": "Terraform will immediately destroy all the infrastructure",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -3068,6 +3621,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -3097,6 +3654,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -3116,6 +3677,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -3135,6 +3700,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -3169,6 +3738,10 @@
         "text": "Terraform code",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -3203,6 +3776,10 @@
         "text": "None of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -3232,6 +3809,10 @@
         "text": "Storing references to workspaces which are locked",
         "votes": 1
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -3261,6 +3842,10 @@
         "text": "Delete the Terraform VM resources from your Terraform code then run terraform plan and terraform apply",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -3290,6 +3875,10 @@
         "text": "The module's Terraform code",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -3305,10 +3894,14 @@
       {
         "letter": "B",
         "text": "False",
-        "votes": 35,
+        "votes": 36,
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -3338,6 +3931,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -3367,6 +3964,10 @@
         "text": "file",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -3396,13 +3997,29 @@
         "text": "Change the referenced value to my_network.outputs.vnet_id",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0007200001.png",
+      "https://www.examtopics.com/assets/media/exam-media/04279/0007200002.png"
     ]
   },
   {
     "number": 130,
     "topic": 1,
     "text": "You are writing a child Terraform module which provisions an AWS instance. You want to make use of the IP address returned in the root configuration. You name the instance resource \"main\".Which of these is the correct way to define the output value using HCL2?A.B.",
-    "choices": []
+    "choices": [],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0007300001.jpg",
+      "https://www.examtopics.com/assets/media/exam-media/04279/0007300002.jpg"
+    ]
   },
   {
     "number": 131,
@@ -3431,6 +4048,10 @@
         "text": "A catalog of approved resources can be accessed from drop down lists in a request form",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -3460,6 +4081,10 @@
         "text": "Modules can call other modules",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -3489,6 +4114,10 @@
         "text": "list",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -3518,6 +4147,11 @@
         "text": "Run terraform show -destroy",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "C"
     ]
   },
   {
@@ -3547,6 +4181,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -3566,6 +4204,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -3595,6 +4237,10 @@
         "text": "The ability to autoscale a group of servers",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -3619,13 +4265,29 @@
         "text": "terraform refresh",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0007700001.jpg"
     ]
   },
   {
     "number": 139,
     "topic": 1,
     "text": "You are creating a Terraform configuration which needs to make use of multiple providers, one for AWS and one for Datadog.Which of the following provider blocks would allow you to do this?A.B.C.",
-    "choices": []
+    "choices": [],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0007800001.jpg",
+      "https://www.examtopics.com/assets/media/exam-media/04279/0007900001.jpg",
+      "https://www.examtopics.com/assets/media/exam-media/04279/0008000001.jpg"
+    ]
   },
   {
     "number": 140,
@@ -3644,6 +4306,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -3663,6 +4329,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -3692,6 +4362,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -3726,6 +4400,10 @@
         "text": "API driven workflows",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -3755,6 +4433,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -3790,6 +4472,12 @@
         "text": "Group a collection of Terraform configuration files that map to a single state file",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "B",
+      "C"
     ]
   },
   {
@@ -3809,6 +4497,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -3838,6 +4530,10 @@
         "text": "Terraform requires resource dependencies to be defined as modules and sourced in order",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -3867,6 +4563,11 @@
         "votes": 0,
         "correct": true
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "C",
+      "D"
     ]
   },
   {
@@ -3896,6 +4597,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -3925,6 +4630,13 @@
         "text": "Requires any version of the AWS provider > 3.0",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0008400001.jpg"
     ]
   },
   {
@@ -3954,6 +4666,10 @@
         "text": "Your Terraform configuration",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -3983,6 +4699,10 @@
         "text": "source = \"hashicorp/consul/aws\"",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -4017,6 +4737,11 @@
         "text": "You cannot target specific resources for the operation",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "C"
     ]
   },
   {
@@ -4051,6 +4776,10 @@
         "text": "None of the above (all statements above are correct)",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -4085,6 +4814,11 @@
         "votes": 0,
         "correct": true
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "C",
+      "E"
     ]
   },
   {
@@ -4114,6 +4848,13 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0008700001.jpg"
     ]
   },
   {
@@ -4143,6 +4884,10 @@
         "text": "Set the variable value on the command line with the -var flag",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -4162,6 +4907,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -4196,6 +4945,13 @@
         "text": "None of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0008900001.jpg"
     ]
   },
   {
@@ -4215,6 +4971,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -4255,6 +5015,12 @@
         "text": "terraform validate",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "D",
+      "E"
     ]
   },
   {
@@ -4284,6 +5050,10 @@
         "text": "All of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -4313,6 +5083,10 @@
         "text": "After the apply phase",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -4342,6 +5116,10 @@
         "text": "Provides limited access to a cloud environment",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -4371,6 +5149,10 @@
         "text": "Modules stored on GitHub do not support versioning",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -4400,6 +5182,10 @@
         "text": "Discouraged",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -4419,6 +5205,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -4448,6 +5238,10 @@
         "text": "Review /var/log/terraform.log for error messages",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -4482,6 +5276,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "E"
     ]
   },
   {
@@ -4511,6 +5309,10 @@
         "text": "terraform output",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -4540,6 +5342,10 @@
         "text": "None of the above",
         "votes": 19
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -4559,6 +5365,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -4578,6 +5388,10 @@
         "text": "False",
         "votes": 6
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -4607,6 +5421,10 @@
         "text": "Terraform will remove the virtual machine from the state file, but the resource will still exist",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -4636,13 +5454,25 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
     "number": 176,
     "topic": 1,
     "text": "In Terraform HCL, an object type of object({ name=string, age=number }) would match this value:A.B.",
-    "choices": []
+    "choices": [],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0009600001.jpg",
+      "https://www.examtopics.com/assets/media/exam-media/04279/0009600002.jpg"
+    ]
   },
   {
     "number": 177,
@@ -4671,6 +5501,10 @@
         "text": "Provider plugin cache",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -4700,6 +5534,11 @@
         "text": "Public repository on GitHub",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "C"
     ]
   },
   {
@@ -4729,6 +5568,11 @@
         "text": "All passwords should be rotated on a quarterly basis.",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "B"
     ]
   },
   {
@@ -4758,6 +5602,10 @@
         "text": "Nothing, provisioners will not show errors in the command line",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -4787,6 +5635,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -4816,6 +5668,10 @@
         "text": "terraform validate",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -4845,6 +5701,13 @@
         "text": "The backend configuration should contain multiple credentials so that more than one user can execute terraform plan and terraform apply",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
+    ],
+    "images": [
+      "https://www.examtopics.com/assets/media/exam-media/04279/0009900001.jpg"
     ]
   },
   {
@@ -4864,6 +5727,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -4893,6 +5760,10 @@
         "text": "Destroy the Terraform state file while leaving infrastructure intact",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -4922,6 +5793,10 @@
         "text": "TP_LOG_PATH",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -4951,6 +5826,10 @@
         "text": "The DevOps team is tasked with automating a manual provisioning process",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -4970,6 +5849,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -4999,6 +5882,11 @@
         "text": "Schedule Terraform to run at a planned time in the future",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "C"
     ]
   },
   {
@@ -5028,13 +5916,35 @@
         "votes": 0,
         "correct": true
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "C",
+      "D"
     ]
   },
   {
     "number": 191,
     "topic": 1,
     "text": "FILL BLANK -You need to migrate a workspace to use a remote backend. After updating your configuration, what command do you run to perform the migration?Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.",
-    "choices": []
+    "choices": [],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "t",
+      "e",
+      "r",
+      "r",
+      "a",
+      "f",
+      "o",
+      "r",
+      "m",
+      " ",
+      "i",
+      "n",
+      "i",
+      "t"
+    ]
   },
   {
     "number": 192,
@@ -5068,6 +5978,11 @@
         "text": "The version of the module",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "B"
     ]
   },
   {
@@ -5097,6 +6012,10 @@
         "text": "terraform providers -upgrade",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5116,6 +6035,10 @@
         "text": "False",
         "votes": 15
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5145,6 +6068,10 @@
         "text": "Terraform will change the port back to 80 in your code.",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -5164,6 +6091,10 @@
         "text": "False",
         "votes": 4
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5198,6 +6129,11 @@
         "text": "Add new Terraform code (*.tf files) for staging in the same directory",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "B",
+      "C"
     ]
   },
   {
@@ -5227,6 +6163,10 @@
         "text": "Terraform provisioner",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -5246,6 +6186,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -5275,6 +6219,10 @@
         "text": "$(var.num_servers)",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5304,6 +6252,10 @@
         "text": "terraform state list",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -5333,6 +6285,13 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
+    ],
+    "images": [
+      "https://www.examtopics.comhttps://img.examtopics.com/terraform-associate/image1.png"
     ]
   },
   {
@@ -5362,6 +6321,13 @@
         "text": "terraform push",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
+    ],
+    "images": [
+      "https://www.examtopics.comhttps://img.examtopics.com/terraform-associate/image2.png"
     ]
   },
   {
@@ -5391,6 +6357,10 @@
         "text": "Outputs",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5420,6 +6390,10 @@
         "text": "Automation",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5439,6 +6413,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -5468,6 +6446,10 @@
         "text": "Run terraform destroy then terraform apply",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -5487,6 +6469,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5506,6 +6492,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5535,6 +6525,10 @@
         "text": "Count arguments",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -5564,6 +6558,10 @@
         "text": "source = \u201chashicorp/consul/aws\u201d",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5593,6 +6591,10 @@
         "text": "high[numcpus]",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5612,6 +6614,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -5641,6 +6647,10 @@
         "text": "string",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -5670,6 +6680,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -5699,6 +6713,10 @@
         "text": "They have role-based access controls",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -5728,6 +6746,10 @@
         "text": "State is used to store variables and quickly reuse existing code",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5762,6 +6784,10 @@
         "text": "HTTP",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -5781,6 +6807,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -5810,6 +6840,10 @@
         "text": "Subfolder within a workspace",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -5839,6 +6873,10 @@
         "text": "",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -5868,6 +6906,13 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
+    ],
+    "images": [
+      "https://www.examtopics.comhttps://img.examtopics.com/terraform-associate/image7.png"
     ]
   },
   {
@@ -5897,6 +6942,10 @@
         "text": "Private module registry",
         "votes": 1
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -5926,6 +6975,10 @@
         "text": "Before you start coding a new Terraform project",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -5945,6 +6998,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -5974,6 +7031,10 @@
         "text": "After you run terraform apply so you can validate that your infrastructure is reflected in your code",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -6003,6 +7064,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -6032,6 +7097,10 @@
         "text": "Compares your Terraform code and local state file to the remote state file in a cloud provider and determines if any changes need to be made",
         "votes": 3
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -6067,6 +7136,12 @@
         "text": "You can check out and check in cloud access keys",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "B",
+      "C"
     ]
   },
   {
@@ -6102,6 +7177,12 @@
         "votes": 0,
         "correct": true
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "D",
+      "E"
     ]
   },
   {
@@ -6131,6 +7212,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -6160,6 +7245,10 @@
         "text": "None of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -6189,6 +7278,10 @@
         "text": "It uses a different backend",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -6208,6 +7301,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -6237,6 +7334,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -6256,6 +7357,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -6285,6 +7390,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -6304,6 +7413,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -6323,6 +7436,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -6357,6 +7474,11 @@
         "text": "Validate",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "B",
+      "D"
     ]
   },
   {
@@ -6391,6 +7513,10 @@
         "text": "None of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -6420,6 +7546,10 @@
         "text": "null-exec",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -6449,6 +7579,10 @@
         "text": "All",
         "votes": 1
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -6478,6 +7612,10 @@
         "text": "A series of commands you enter into a public cloud console",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -6502,6 +7640,10 @@
         "text": "version ~> 3.1",
         "votes": 4
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -6531,6 +7673,10 @@
         "text": "After you run terraform import",
         "votes": 9
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -6560,6 +7706,10 @@
         "text": "terraform fmt -check",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -6589,6 +7739,10 @@
         "text": "Version control",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -6618,6 +7772,10 @@
         "text": "",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -6647,6 +7805,11 @@
         "text": "A variable file",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "B",
+      "C"
     ]
   },
   {
@@ -6676,6 +7839,10 @@
         "text": "Terraform does not support complex input variables of different types",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -6705,6 +7872,10 @@
         "text": "Cloud provider",
         "votes": 1
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -6729,6 +7900,10 @@
         "text": "Run the terraform validate command prior to executing terraform plan or terraform apply",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -6758,6 +7933,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -6787,6 +7966,10 @@
         "text": "",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -6816,6 +7999,10 @@
         "text": "Terraform will use the latest version of the provider available at the time you provision your new resource",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -6835,6 +8022,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -6864,6 +8055,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -6893,6 +8088,10 @@
         "text": "Run Terraform with parallelism set to 1",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -6922,6 +8121,10 @@
         "text": "TF_VAR_log_path",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -6941,6 +8144,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -6960,6 +8167,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -6979,6 +8190,10 @@
         "text": "False",
         "votes": 2
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -7008,6 +8223,10 @@
         "text": "Delegate output to other teams",
         "votes": 5
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -7037,6 +8256,10 @@
         "text": "name",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -7066,6 +8289,10 @@
         "text": "Use terraform refresh/code to find out which IDs are already part of state",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -7090,6 +8317,10 @@
         "text": "Write the value to a file and specify the file with the -var-file flag",
         "votes": 5
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -7109,6 +8340,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -7128,6 +8363,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -7157,6 +8396,10 @@
         "text": "It will happen automatically",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -7186,6 +8429,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -7215,6 +8462,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -7244,6 +8495,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -7263,6 +8518,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -7297,6 +8556,10 @@
         "text": "All of these",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -7316,6 +8579,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -7345,6 +8612,10 @@
         "text": "terraform state list",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -7364,6 +8635,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -7393,6 +8668,10 @@
         "text": "Stop and generate an error message about the missing instances",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -7412,6 +8691,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -7441,6 +8724,10 @@
         "text": "lifecycle",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -7460,6 +8747,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -7489,6 +8780,10 @@
         "text": "None of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -7518,6 +8813,13 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
+    ],
+    "images": [
+      "https://www.examtopics.comhttps://img.examtopics.com/terraform-associate/image16.png"
     ]
   },
   {
@@ -7547,6 +8849,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -7576,6 +8882,10 @@
         "text": "All of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -7610,6 +8920,11 @@
         "text": "Prevents manual modifications to your resources",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "B",
+      "D"
     ]
   },
   {
@@ -7629,6 +8944,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -7658,6 +8977,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -7692,6 +9015,10 @@
         "text": "HTTP",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -7711,6 +9038,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -7740,6 +9071,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -7774,6 +9109,10 @@
         "text": "None of the above",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -7803,6 +9142,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -7832,6 +9175,10 @@
         "text": "terraform plan rm aws_instance.ubuntu[l]",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -7851,6 +9198,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -7880,6 +9231,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -7909,6 +9264,10 @@
         "text": "Modules can call other modules",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -7938,6 +9297,11 @@
         "votes": 0,
         "correct": true
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "D"
     ]
   },
   {
@@ -7967,6 +9331,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -7996,6 +9364,10 @@
         "text": "terraform plan -target-state",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -8025,6 +9397,10 @@
         "text": "terraform import",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -8054,6 +9430,10 @@
         "text": "terraform test",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -8083,6 +9463,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -8112,6 +9496,10 @@
         "text": "None of the above are correct",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -8141,6 +9529,10 @@
         "text": "Write Terraform configuration, run terraform plan to initialize the working directory or workspace, and terraform apply to create the infrastructure",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -8170,6 +9562,11 @@
         "text": "Automated infrastructure deployment visualization",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "B"
     ]
   },
   {
@@ -8185,7 +9582,7 @@
       {
         "letter": "B",
         "text": "Mark the variable as sensitive",
-        "votes": 11,
+        "votes": 12,
         "correct": true,
         "mostVoted": true
       },
@@ -8199,6 +9596,10 @@
         "text": "A -var flag",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -8233,6 +9634,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "E"
     ]
   },
   {
@@ -8262,6 +9667,10 @@
         "text": "terraform show",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -8281,6 +9690,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -8306,10 +9719,14 @@
       {
         "letter": "D",
         "text": "Terraform needs to install the necessary plugins first",
-        "votes": 2,
+        "votes": 3,
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -8339,6 +9756,10 @@
         "text": "Plans and applies can be triggered via version control system integrations",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -8368,6 +9789,10 @@
         "text": "The ability to share modules with public Terraform users and members of Terraform Cloud Organizations",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -8387,6 +9812,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -8416,6 +9845,10 @@
         "text": "Versioning",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -8445,6 +9878,10 @@
         "text": "In the .terraform.lock.hcl file",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -8474,6 +9911,10 @@
         "text": "All providers are part of the Terraform core binary",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -8503,6 +9944,10 @@
         "text": "By adding variables to each Terraform Cloud workspace to ensure these settings are always enabled",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -8532,6 +9977,10 @@
         "text": "In an environment variable",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -8561,6 +10010,10 @@
         "text": "",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -8590,6 +10043,10 @@
         "text": "After the apply phase",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -8618,6 +10075,10 @@
         "votes": 0,
         "correct": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -8637,6 +10098,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -8666,6 +10131,10 @@
         "text": "You want Terraform to destroy all the infrastructure in your workspace",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -8685,6 +10154,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -8714,6 +10187,10 @@
         "text": "Whenever you enable state locking",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -8743,6 +10220,10 @@
         "text": "Terraform will recreate the load balancer.",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -8772,6 +10253,10 @@
         "text": "Load required provider plugins",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -8791,6 +10276,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -8820,6 +10309,13 @@
         "text": "compute_instance",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
+    ],
+    "images": [
+      "https://www.examtopics.comhttps://img.examtopics.com/terraform-associate/image21.png"
     ]
   },
   {
@@ -8849,6 +10345,13 @@
         "text": "Append ?ref=v1.0.0 argument to the source path.",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
+    ],
+    "images": [
+      "https://www.examtopics.comhttps://img.examtopics.com/terraform-associate/image22.png"
     ]
   },
   {
@@ -8878,6 +10381,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -8896,6 +10403,10 @@
         "votes": 0,
         "correct": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -8924,6 +10435,10 @@
         "text": "Before you start coding a new Terraform project",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -8952,6 +10467,10 @@
         "text": "After you run terraform apply so you can validate your provider credentials",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -8980,6 +10499,10 @@
         "votes": 1,
         "correct": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -8998,6 +10521,10 @@
         "text": "False",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "A"
     ]
   },
   {
@@ -9027,6 +10554,13 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
+    ],
+    "images": [
+      "https://www.examtopics.comhttps://img.examtopics.com/terraform-associate/image24.png"
     ]
   },
   {
@@ -9062,6 +10596,12 @@
         "votes": 0,
         "correct": true
       }
+    ],
+    "isMultiAnswer": true,
+    "correctAnswers": [
+      "A",
+      "B",
+      "E"
     ]
   },
   {
@@ -9091,6 +10631,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -9120,6 +10664,10 @@
         "text": "Destroys all infrastructure in the configured Terraform provider.",
         "votes": 2
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "C"
     ]
   },
   {
@@ -9139,6 +10687,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -9168,6 +10720,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -9197,6 +10753,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "D"
     ]
   },
   {
@@ -9226,6 +10786,10 @@
         "text": "discouraged",
         "votes": 0
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   },
   {
@@ -9245,6 +10809,10 @@
         "correct": true,
         "mostVoted": true
       }
+    ],
+    "isMultiAnswer": false,
+    "correctAnswers": [
+      "B"
     ]
   }
 ]
