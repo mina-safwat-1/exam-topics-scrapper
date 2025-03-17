@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // DOM elements
     const container = document.querySelector('.container');
     const progressBar = document.getElementById('progressBar');
     const currentQuestionSpan = document.getElementById('currentQuestion');
     const totalQuestionsSpan = document.getElementById('totalQuestions');
-    
+
     // Variables
     let questions = [];
     let currentQuestionIndex = 0;
-    
+
     // Fetch questions from JSON file
     fetch('questions_improved.json')
         .then(response => response.json())
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
         });
-    
+
     // Function to initialize the question card structure
     function initializeQuestionCard() {
         // Create main element if it doesn't exist
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             main.innerHTML = ''; // Clear main if it exists
         }
-        
+
         // Create question card structure
         const questionCard = document.createElement('div');
         questionCard.className = 'question-card';
-        
+
         questionCard.innerHTML = `
             <div class="question-header">
                 <span class="question-number"></span>
@@ -70,10 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="vote-details"></div>
                 </div>
             </div>
+
+            
         `;
-        
+
         main.appendChild(questionCard);
-        
+
         // Create navigation if it doesn't exist
         if (!document.querySelector('.navigation')) {
             const navigation = document.createElement('div');
@@ -83,29 +85,40 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button id="nextBtn" class="nav-btn">Next</button>
             `;
             container.appendChild(navigation);
+
         }
-        
+
+
+        const footer = document.createElement('footer');
+        footer.className = 'footer';
+        footer.innerHTML = `
+        <p>Created by Mina Safwat</p>
+        `;
+        container.appendChild(footer);
+
+
+
         // Reinitialize button references
         initializeEventListeners();
     }
-    
+
     // Function to initialize event listeners
     function initializeEventListeners() {
         const revealBtn = document.getElementById('revealBtn');
         const hideBtn = document.getElementById('hideBtn');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
-        
+
         if (revealBtn) {
             revealBtn.addEventListener('click', revealAnswer);
         }
-        
+
         if (hideBtn) {
             hideBtn.addEventListener('click', hideAnswer);
         }
-        
+
         if (prevBtn) {
-            prevBtn.addEventListener('click', function() {
+            prevBtn.addEventListener('click', function () {
                 if (currentQuestionIndex > 0) {
                     currentQuestionIndex--;
                     loadQuestion(currentQuestionIndex);
@@ -113,9 +126,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
-        
+
         if (nextBtn) {
-            nextBtn.addEventListener('click', function() {
+            nextBtn.addEventListener('click', function () {
                 if (currentQuestionIndex < questions.length - 1) {
                     currentQuestionIndex++;
                     loadQuestion(currentQuestionIndex);
@@ -124,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
     function loadQuestion(index) {
         const question = questions[index];
         const questionCard = document.querySelector('.question-card');
@@ -171,19 +185,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
             // Handle multi-answer questions
             if (question.isMultiAnswer) {
-                choiceItem.addEventListener('click', function() {
+                choiceItem.addEventListener('click', function () {
                     // Toggle the selected class
                     this.classList.toggle('selected');
-    
-                    // Automatically show the answer after selection
-                    if (document.querySelector('.answer-container').style.display === 'none' || 
-                        !document.querySelector('.answer-container').style.display) {
-                        revealAnswer();
-                    }
                 });
             } else {
                 // Single-answer questions
-                choiceItem.addEventListener('click', function() {
+                choiceItem.addEventListener('click', function () {
                     // Remove selected from all choices
                     document.querySelectorAll('.choice-item').forEach(item => {
                         item.classList.remove('selected');
@@ -191,12 +199,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
                     // Add selected class
                     this.classList.add('selected');
-    
-                    // Automatically show the answer after selection
-                    if (document.querySelector('.answer-container').style.display === 'none' || 
-                        !document.querySelector('.answer-container').style.display) {
-                        revealAnswer();
-                    }
                 });
             }
     
@@ -218,6 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (prevBtn) prevBtn.disabled = index === 0;
         if (nextBtn) nextBtn.disabled = index === questions.length - 1;
     }
+
     function revealAnswer() {
         const answerContainer = document.querySelector('.answer-container');
         const revealBtn = document.getElementById('revealBtn');
@@ -253,60 +256,59 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
-    // Function to hide the answer
+
     function hideAnswer() {
         const answerContainer = document.querySelector('.answer-container');
         const revealBtn = document.getElementById('revealBtn');
         const hideBtn = document.getElementById('hideBtn');
-        
+    
         if (!answerContainer) return;
-        
+    
         answerContainer.style.display = 'none';
-        
+    
         if (hideBtn) hideBtn.style.display = 'none';
         if (revealBtn) revealBtn.style.display = 'inline-block';
-        
+    
         // Remove highlight and most voted badge from choices
         document.querySelectorAll('.choice-item').forEach(item => {
             item.classList.remove('correct');
             item.classList.remove('selected');
-            
+    
             // Remove most voted badge
             const badge = item.querySelector('.most-voted-badge');
             if (badge) badge.remove();
         });
     }
-    
+
     // Function to update the vote distribution
     function updateVoteDistribution(choices) {
         const voteChart = document.querySelector('.vote-chart');
         const voteDetails = document.querySelector('.vote-details');
-        
+
         if (!voteChart || !voteDetails) return;
-        
+
         const totalVotes = choices.reduce((sum, choice) => sum + choice.votes, 0);
-        
+
         // Clear existing content
         voteChart.innerHTML = '<div class="vote-bar"></div>';
         voteDetails.innerHTML = '';
-        
+
         const voteBar = voteChart.querySelector('.vote-bar');
-        
+
         // Sort choices by votes (descending)
         const sortedChoices = [...choices].sort((a, b) => b.votes - a.votes);
-        
+
         // Add vote progress elements
         sortedChoices.forEach(choice => {
             const percentage = totalVotes > 0 ? Math.round((choice.votes / totalVotes) * 100) : 0;
-            
+
             // Create progress element
             const progressElement = document.createElement('div');
             progressElement.className = `vote-progress vote-option-${choice.letter.toLowerCase()}`;
             progressElement.style.width = `${percentage}%`;
             progressElement.textContent = `${choice.letter} (${percentage}%)`;
             voteBar.appendChild(progressElement);
-            
+
             // Add vote detail
             const detailElement = document.createElement('div');
             detailElement.className = 'vote-detail';
@@ -317,11 +319,11 @@ document.addEventListener('DOMContentLoaded', function() {
             voteDetails.appendChild(detailElement);
         });
     }
-    
+
     // Update progress bar
     function updateProgressBar() {
         if (!progressBar || !currentQuestionSpan) return;
-        
+
         const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
         progressBar.style.width = `${progress}%`;
         currentQuestionSpan.textContent = currentQuestionIndex + 1;
