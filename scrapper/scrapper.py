@@ -1,7 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-import time
 import re
+
+import argparse
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -15,7 +16,15 @@ import os
 
 
 base_request_url = "https://www.examtopics.com"
+
+
+# Set up the Chrome options (headless mode)
 chrome_options = Options()
+chrome_options.add_argument("--headless=new")  # New headless mode in Chrome 109+
+chrome_options.add_argument("--disable-gpu")    # GPU hardware acceleration isn't needed
+chrome_options.add_argument("--window-size=1920,1080")  # Set window size for consistent rendering
+
+# Initialize the driver
 driver = webdriver.Chrome(options=chrome_options)
 
 def get_links_of_questions(exam_vendor="", exam_name=""):
@@ -40,7 +49,8 @@ def get_links_of_questions(exam_vendor="", exam_name=""):
             return
         
         # create a file to store the links
-        os.system("echo "" > questions")
+        with open("questions", "w") as f:
+            pass
         
         html_content = driver.page_source
         soup = BeautifulSoup(html_content, "html.parser")
@@ -241,6 +251,23 @@ def extract_question_data(html_content):
 
 # Example usage
 if __name__ == "__main__":
-    get_links_of_questions(exam_vendor="hashicorp" , exam_name="Exam Terraform Associate topic 1")
-    # sort_questions("./questions")
-    # get_question("ordered_questions")
+    
+    # example 
+    # python scrapper.py --vendor "amazon" --name "Exam AWS Certified Cloud Practitioner CLF-C02 topic 1"
+    
+    # Set up argument parser
+    parser = argparse.ArgumentParser(description='Scrape exam questions from vendor website')
+    
+    # example vendor="amazon"
+    parser.add_argument('--vendor', '-v', required=True, help='Exam vendor name')
+    # example exam_name="Exam AWS Certified Cloud Practitioner CLF-C02 topic 1"
+    parser.add_argument('--name', '-n', required=True, help='Exam name prefix')
+    
+    # Parse arguments
+    args = parser.parse_args()
+    
+    # Call your function with the arguments
+    get_links_of_questions(exam_vendor=args.vendor, exam_name=args.name)
+        
+    sort_questions("./questions")
+    get_question("ordered_questions")
