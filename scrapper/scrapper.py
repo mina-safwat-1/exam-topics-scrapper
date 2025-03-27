@@ -11,23 +11,14 @@ import json
 
 from bs4 import BeautifulSoup
 
+import os
+
+
 base_request_url = "https://www.examtopics.com"
 chrome_options = Options()
 driver = webdriver.Chrome(options=chrome_options)
 
 def get_links_of_questions(exam_vendor="", exam_name=""):
-    """
-    Opens a website in Chrome WebDriver and keeps it open for the specified duration
-    
-    Args:
-        url (str): URL of the website to open
-        duration_seconds (int): How long to keep the browser open in seconds
-    """
-    # Set up Chrome options (uncomment headless mode if you don't want to see the browser)
-    # chrome_options.add_argument("--headless")  # Comment this out to see the browser
-    
-    # Initialize the Chrome driver
-    
     try:
         # Navigate to the URL        
         url = base_request_url + "/discussions/" + exam_vendor
@@ -35,12 +26,21 @@ def get_links_of_questions(exam_vendor="", exam_name=""):
         print(f"Opening {url}...")
         driver.get(url)
         print(f"Page title: {driver.title}")
+
+        # Wait for either page selector or discussion links to load (for single-page scenarios)
+        try:
+            WebDriverWait(driver, 15).until(
+                EC.any_of(
+                    EC.presence_of_element_located((By.CLASS_NAME, "discussion-list-page-select")),
+                    EC.presence_of_element_located((By.CLASS_NAME, "discussion-link"))
+                )
+            )
+        except:
+            print("Timeout waiting for initial page elements")
+            return
         
-        # # Keep the browser open for the specified duration
-        # print(f"Keeping the browser open for {duration_seconds} seconds...")
-        time.sleep(10)
-        # print("Time's up! Closing the browser.")
-        
+        # create a file to store the links
+        os.system("echo "" > questions")
         
         html_content = driver.page_source
         soup = BeautifulSoup(html_content, "html.parser")
@@ -59,7 +59,19 @@ def get_links_of_questions(exam_vendor="", exam_name=""):
             for i in range(1, num_pages + 1):
                 url = base_request_url + "/discussions/" + exam_vendor + "/{}/".format(i)
                 driver.get(url)
-                time.sleep(5)
+                
+                
+                # Wait for discussion links to load
+                try:
+                    WebDriverWait(driver, 15).until(
+                        EC.presence_of_element_located((By.CLASS_NAME, "discussion-link"))
+                    )
+                except:
+                    print(f"Timeout waiting for links on page {i}")
+                    continue        
+                
+                # time.sleep(5)
+
                 html_content = driver.page_source
                 soup = BeautifulSoup(html_content, "html.parser")
                 links = soup.find_all(attrs={"class": "discussion-link"})
@@ -108,7 +120,7 @@ def get_question(path):
         urls = file.readlines()
         for url in urls:
             driver.get(url)
-            wait = WebDriverWait(driver, 10)
+            wait = WebDriverWait(driver, 10).until
             reveal_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a.btn.btn-primary.reveal-solution")))
             # Click the button
             reveal_button.click()
@@ -229,6 +241,6 @@ def extract_question_data(html_content):
 
 # Example usage
 if __name__ == "__main__":
-    # open_website_for_duration(exam_vendor="hashicorp" , exam_name="Exam Terraform Associate topic 1")
+    get_links_of_questions(exam_vendor="hashicorp" , exam_name="Exam Terraform Associate topic 1")
     # sort_questions("./questions")
-    get_question("ordered_questions")
+    # get_question("ordered_questions")
