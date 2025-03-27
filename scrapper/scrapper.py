@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import re
 
+from tqdm import tqdm  # Add this import at the top
 import argparse
 
 from selenium.webdriver.support.ui import WebDriverWait
@@ -26,6 +27,8 @@ chrome_options.add_argument("--window-size=1920,1080")  # Set window size for co
 
 # Initialize the driver
 driver = webdriver.Chrome(options=chrome_options)
+
+# print(driver.capabilities["browserVersion"])
 
 def get_links_of_questions(exam_vendor="", exam_name=""):
     try:
@@ -66,7 +69,9 @@ def get_links_of_questions(exam_vendor="", exam_name=""):
 
 
         with open("questions", "a") as file:
-            for i in range(1, num_pages + 1):
+            for i in tqdm(range(1, num_pages + 1),
+                        desc="Processing pages", 
+                        unit="page"):                
                 url = base_request_url + "/discussions/" + exam_vendor + "/{}/".format(i)
                 driver.get(url)
                 
@@ -128,20 +133,24 @@ def get_question(path):
     
     with open(path, "r") as file:
         urls = file.readlines()
-        for url in urls:
-            driver.get(url)
-            wait = WebDriverWait(driver, 10).until
-            reveal_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a.btn.btn-primary.reveal-solution")))
-            # Click the button
-            reveal_button.click()
-            html_content = driver.page_source
-                                        
-            # In this case, we'll use the provided HTML content
-            question_data = extract_question_data(html_content)
-            
-            questions.append(question_data)
+        for url in tqdm(urls, desc="Processing URLs", unit="url"):            
+            try:
+                
+                driver.get(url)
+                wait = WebDriverWait(driver, 10)
+                reveal_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a.btn.btn-primary.reveal-solution")))
+                # Click the button
+                reveal_button.click()
+                html_content = driver.page_source
+                                            
+                # In this case, we'll use the provided HTML content
+                question_data = extract_question_data(html_content)
+                
+                questions.append(question_data)
+            except Exception as e:
+                print(f"An error occurred while processing {url}")
+                continue
 
-            # Convert to JSON and print
             
         json_output = json.dumps(questions, indent=2)
         # Save to a file
@@ -269,5 +278,5 @@ if __name__ == "__main__":
     # Call your function with the arguments
     get_links_of_questions(exam_vendor=args.vendor, exam_name=args.name)
         
-    sort_questions("./questions")
-    get_question("ordered_questions")
+    # sort_questions("./questions")
+    get_question("questions")
