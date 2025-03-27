@@ -104,27 +104,7 @@ def get_links_of_questions(exam_vendor="", exam_name=""):
         print("Browser closed.")
 
 
-def sort_questions(file_path):
-    questions = {}
-    pattern = r"question-(\d+)-discussion"
-    with open(file_path, "r") as file:
-        lines = file.readlines()
-        for url in lines:
-            match = re.search(pattern, url)
-            if match:
-                question_number = int(match.group(1))
-                questions[question_number] = url
-    urls = []
-    for key in sorted(questions.keys()):
-        urls.append(questions[key])
-    
-    with open("ordered_questions", "w") as file:
-        for url in urls:
-            file.write(url)
-        
-        
-    with open(file_path, "w") as file:
-        file.writelines(lines)
+
 
 
 def get_question(path):
@@ -257,6 +237,17 @@ def extract_question_data(html_content):
     return question_data
     
 
+def sort_questions(file_path):
+    # To read from a file and sort:
+    with open(file_path) as f:
+        data = json.load(f)
+
+    sorted_data = sorted(data, key=lambda x: x["number"])
+
+    # Write sorted data back to a file
+    with open(file_path, 'w') as f:
+        json.dump(sorted_data, f, indent=2)
+
 
 # Example usage
 if __name__ == "__main__":
@@ -277,6 +268,5 @@ if __name__ == "__main__":
     
     # Call your function with the arguments
     get_links_of_questions(exam_vendor=args.vendor, exam_name=args.name)
-        
-    # sort_questions("./questions")
     get_question("questions")
+    sort_questions("questions.json")
